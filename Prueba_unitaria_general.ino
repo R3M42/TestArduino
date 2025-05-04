@@ -65,7 +65,7 @@ bool verificarConexionMQTT() {
   return true;
 }
 
-// Pruebas unitarias de sensores y conexión MQTT
+// TEST SUITE DE LOS SENSORES DE PH, TEMPERATURA Y TURBIDEZ °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
 test(sensorTemperatura) {
   DS18B20.requestTemperatures();
   float temperatura = DS18B20.getTempCByIndex(0);
@@ -109,7 +109,7 @@ test(sensorTurbidez) {
     Serial.println("¡Advertencia! El sensor de turbidez podría no estar conectado.");
   }
 }
-
+// TEST SUITE SOBRE EL PROTOCOLO MQTT °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
 test(conexionMQTT) {
   assertTrue(verificarConexionMQTT(), "El broker MQTT no está activo.");
 }
